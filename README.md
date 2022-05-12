@@ -1,4 +1,4 @@
-# Download Random Music
+# Get Random Music
 
 Downloads a random 15 second music file from https://tones.wolfram.com/generate.
 
@@ -7,7 +7,7 @@ Downloads a random 15 second music file from https://tones.wolfram.com/generate.
 As a shell script:
 
 ```sh
-npx download-random-music
+npx get-random-music
 ```
 
 Or in JavaScript:
@@ -15,7 +15,7 @@ Or in JavaScript:
 ```js
 const fs = require("fs");
 const path = require("path");
-const downloadRandomMusic = require("download-random-music");
+const downloadRandomMusic = require("get-random-music");
 
 const outPath = path.join(__dirname, "random-music.mp3");
 const outStream = fs.createWriteStream(outPath);
