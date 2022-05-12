@@ -131,3 +131,7 @@ dist
 
 files
 .npmrc
+*.mp3
+*.wav
+*.flac
+*.midi
