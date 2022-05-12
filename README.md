@@ -1,4 +1,4 @@
-# Random Music Downloader
+# Download Random Music
 
 Downloads a random 15 second music file from https://tones.wolfram.com/generate.
 
