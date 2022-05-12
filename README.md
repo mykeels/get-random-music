@@ -4,6 +4,14 @@ Downloads a random 15 second music file from https://tones.wolfram.com/generate.
 
 ## Usage
 
+As a shell script:
+
+```sh
+npx download-random-music
+```
+
+Or in JavaScript:
+
 ```js
 const fs = require("fs");
 const path = require("path");

@@ -5,7 +5,7 @@ const { locateChrome } = require("./utils");
 
 /**
  *
- * Downloads a random 15 second mp3 file from https://tones.wolfram.com/generate
+ * Downloads a random 15 second music file from https://tones.wolfram.com/generate
  * @param {RandomMusicOptions} options
  * @returns {Promise<import("axios").AxiosResponse<import("stream").Stream>>}
  */
@@ -35,5 +35,5 @@ const downloadRandomMusic = async (options = { format: "MP3" }) => {
  * @property {"MP3" | "MIDI" | "WAV" | "FLAC"} [format]
  */
 
-module.exports.downloadRandomMusic = downloadRandomMusic;
 module.exports = downloadRandomMusic;
+module.exports.downloadRandomMusic = downloadRandomMusic;
