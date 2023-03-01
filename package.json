@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "bin": "dist/bin.js",
-  "typings": "dist/*.d.ts",
+  "typings": "dist",
   "files": [
     "dist"
   ],
