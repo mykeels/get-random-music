@@ -12,8 +12,8 @@
     "url": "https://github.com/mykeels/get-random-music"
   },
   "scripts": {
-    "build": "tsup src/index.ts",
-    "watch": "tsup src/index.ts --watch",
+    "build": "tsup src/*.ts",
+    "watch": "tsup src/*.ts --watch",
     "ts": "tsc",
     "ts:watch": "tsc -w",
     "start": "node src/index.js"
