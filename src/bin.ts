@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const commandLineArgs = require("command-line-args");
-const commandLineUsage = require("command-line-usage");
+import fs from "fs";
+import path from "path";
+import commandLineArgs from "command-line-args";
+import commandLineUsage from "command-line-usage";
 
-const { downloadRandomMusic } = require("./index");
+import { downloadRandomMusic } from "./index";
 
 const options = commandLineArgs([
   { name: "format", alias: "f", type: String, defaultValue: "MP3" },
@@ -64,7 +64,8 @@ if (options.help) {
   downloadStream.pipe(outStream);
   downloadStream.on("error", (error) => {
     console.error(error);
-    downloadStream.close();
+    downloadStream.destroy && downloadStream.destroy();
+    (downloadStream as any).close && (downloadStream as any).close();
   });
   downloadStream.on("close", () =>
     console.log("Downloaded Random Music to", outPath)
