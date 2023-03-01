@@ -1,12 +1,8 @@
-const locateChrome = require("locate-chrome");
+import locate from "locate-chrome";
 
-/**
- * 
- * @returns {Promise<string>}
- */
-module.exports.locateChrome = async () => {
+export const locateChrome = async (): Promise<string> => {
   const executablePath =
-    process.env.CHROME_EXECUTABLE_PATH || (await locateChrome());
+    process.env.CHROME_EXECUTABLE_PATH || (await locate());
 
   if (!executablePath) {
     throw new Error(
